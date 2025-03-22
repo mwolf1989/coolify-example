@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import logo from '../logo.svg'
-
+import { Button } from '@components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 export const Route = createFileRoute('/')({
   component: App,
 })
@@ -17,6 +18,7 @@ function App() {
         <p>
           Edit <code>src/routes/index.tsx</code> and save to reload.
         </p>
+        <Button>Click me</Button>
         <a
           className="text-[#61dafb] hover:underline"
           href="https://reactjs.org"
@@ -33,6 +35,14 @@ function App() {
         >
           Learn TanStack
         </a>
+        <Card className="w-full max-w-sm">
+          <CardHeader>
+            <CardTitle>Card Title</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p>Card Content</p>
+          </CardContent>
+        </Card>
       </header>
     </div>
   )
